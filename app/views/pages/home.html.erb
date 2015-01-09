@@ -12,7 +12,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="item active">
-      <img src="img/barock1.jpg" style="width:100%" class="img-responsive">
+     <%= image_tag("home/barock1.jpg", :style => "width:100%", :class => "img-responsive") %>
       <div class="container">
         <div class="carousel-caption">
           <!--h1>Bootstrap 3 Carousel Layout</h1-->
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="item">
-      <img src="img/berto2.jpg" style="width:100%" class="img-responsive">
+      <%= image_tag("home/berto2.jpg", :style => "width:100%", :class => "img-responsive") %>
       <div class="container">
         <div class="carousel-caption">
           <p style="font-size: 40px; font-family: Gill Sans, sans-serif" align="left"><strong>HUMOR</strong><br><span class="text-muted">Cómicos en LL</span></p>
@@ -31,7 +31,8 @@
       </div>
     </div>
     <div class="item">
-      <a href="../Sinsajo/Sinsajo.html"><img src="img/sinsajo2.jpg" style="width:100%" class="img-responsive"></a>
+      <a href="../Sinsajo/Sinsajo.html">
+      <%= image_tag("home/sinsajo2.jpg", :style => "width:100%", :class => "img-responsive") %>
       <div class="container">
         <div class="carousel-caption">
           <p style="font-size: 40px; font-family: Gill Sans, sans-serif" align="right"><strong>CINE</strong><br><span class="text-muted">Carteleras a la última</span></p>
@@ -74,19 +75,19 @@
   <!-- Three columns of text below the carousel -->
   <div class="row">
     <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/1.jpg">
+      <%= image_tag("home/1.jpg", :class => "img-circle") %>
       <h2 style="font-family: Gill Sans, sans-serif">Museo de la ciencia y el cosmos</h2>
       <p>No te irás de aquí sin aprender y sobre todo sin divertirte con los entretenidos "experimentos" que nos ofrecen nuestros amigos del museo.</p>
       <p><a class="btn btn-default" href="../CienciaCosmos/CienciaCosmos.html">Más</a></p>
     </div>
     <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/2.jpg">
+      <%= image_tag("home/2.jpg", :class => "img-circle") %>
       <h2 style="font-family: Gill Sans, sans-serif">Monte de Mesa Mota</h2>
       <p>Agradable lugar donde celebrar una chuletada con nuestros amigos o familia. Amplio y al aire libre, nos dará mucha paz y evadirnos del día a día.</p>
       <p><a class="btn btn-default" href="../MesaMota/MesaMota.html">Más</a></p>
     </div>
     <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/3.jpg">
+      <%= image_tag("home/3.jpg", :class => "img-circle") %>
       <h2 style="font-family: Gill Sans, sans-serif">Libreria Lemus en Trinidad</h2>
       <p>Espacio para la cultura y el saber. Encuentra todo tipo de libros y documentación para ti.<br>Recuerda que el saber no ocupa lugar.</p>
       <p><a class="btn btn-default" href="#">Más</a></p>
@@ -102,7 +103,7 @@
     </div>
     
   <div class="featurette">
-    <a href="#"><img class="featurette-image img-circle pull-right" src="img/4.jpg"></a>
+    <a href="#"><%= image_tag("home/4.jpg", :class => "featurette-image img-circle pull-right") %></a>
     <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">Hotel_aguere<span class="text-muted"><br>Patrimonio artístico</span></h2>
     <p class="lead">Completamente remodelado y situado en la antigua casa de los maqueses de Torrehermosa, edificio declarado Patrimonio Histórico-Artístico que está ubicado en pleno casco antiguo.</p>
   </div>
@@ -110,7 +111,7 @@
   <hr class="featurette-divider">
 
   <div class="featurette">
-    <a href="../Epoca/Epoca.html"><img class="featurette-image img-circle pull-left" src="img/5.jpg"></a>
+    <a href="../Epoca/Epoca.html"><%= image_tag("home/5.jpg", :class => "featurette-image img-circle pull-right") %></a>
     <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">Café Bar Época. <span class="text-muted"><br>Vuelta al pasado.</span></h2>
     <p class="lead">Café literario con tenue música de jazz, con chocolates bebidos, comidos o con alcohol.<br>Gran local para relajarse en "otros tiempos".</p>
   </div>
@@ -118,7 +119,7 @@
   <hr class="featurette-divider">
 
   <div class="featurette">
-    <a href="#"><img class="featurette-image img-circle pull-right" src="img/6.jpg"></a>
+    <a href="#"><%= image_tag("home/4.jpg", :class => "featurette-image img-circle pull-right") %></a>
     <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">100 Montaditos.<span class="text-muted"><br>Ambiente y calidad.</span></h2>
     <p class="lead">La historia comenzó en el año 2000 en una pequeña playa de Islantilla, Huelva, con un concepto revolucionario, sencillo, de operativa fácil, con ingredientes de alta calidad y con una gran variedad, además de una divertida manera de hacer los pedidos, una combinación que ha resultado ser un completo éxito.</p>
   </div>
