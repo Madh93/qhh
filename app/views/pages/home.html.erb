@@ -1,2 +1,128 @@
 <% title("Home ") %>
-<h1><i class="fa fa-home"></i> Home Page EDITADO <small>views/pages/home.html.erb</small></h1>
+<!-- <h1><i class="fa fa-home"></i> Home Page EDITADO <small>views/pages/home.html.erb</small></h1> -->
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/barock1.jpg" style="width:100%" class="img-responsive">
+      <div class="container">
+        <div class="carousel-caption">
+          <!--h1>Bootstrap 3 Carousel Layout</h1-->
+            <p style="font-size: 40px; font-family: Gill Sans, sans-serif" ><strong>BAROCK</strong><br><span class="text-muted">Local de ocio nocturno</span></p>
+          <!--p><a class="btn btn-lg btn-success" href="#">Learn More</a>
+        </p-->
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/berto2.jpg" style="width:100%" class="img-responsive">
+      <div class="container">
+        <div class="carousel-caption">
+          <p style="font-size: 40px; font-family: Gill Sans, sans-serif" align="left"><strong>HUMOR</strong><br><span class="text-muted">Cómicos en LL</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a href="../Sinsajo/Sinsajo.html"><img src="img/sinsajo2.jpg" style="width:100%" class="img-responsive"></a>
+      <div class="container">
+        <div class="carousel-caption">
+          <p style="font-size: 40px; font-family: Gill Sans, sans-serif" align="right"><strong>CINE</strong><br><span class="text-muted">Carteleras a la última</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="icon-prev" style="color:white;"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="icon-next" style="color:white;"></span>
+  </a>  
+</div>
+<!-- /.carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="cbuscar">
+    <form class="form-inline" role="form">
+  <div class="form-group">
+    <label for="findbox" class="sr-only">Buscar</label>
+    <input size="40" class="form-control" id="findbox" placeholder="Nombre del lugar">
+  </div>
+  <button class="btn btn-info" style="font-family: Gill Sans, sans-serif"><a style="color: white" href="../BUSCAR/menubuscar_con_myqhh.html">Buscar</a></button>
+</form>
+</div>
+        
+        <hr class="featurette-divider">
+        
+<div>
+    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Sugerencias:</u></a></p>
+</div>
+        
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img class="img-circle" src="img/1.jpg">
+      <h2 style="font-family: Gill Sans, sans-serif">Museo de la ciencia y el cosmos</h2>
+      <p>No te irás de aquí sin aprender y sobre todo sin divertirte con los entretenidos "experimentos" que nos ofrecen nuestros amigos del museo.</p>
+      <p><a class="btn btn-default" href="../CienciaCosmos/CienciaCosmos.html">Más</a></p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img class="img-circle" src="img/2.jpg">
+      <h2 style="font-family: Gill Sans, sans-serif">Monte de Mesa Mota</h2>
+      <p>Agradable lugar donde celebrar una chuletada con nuestros amigos o familia. Amplio y al aire libre, nos dará mucha paz y evadirnos del día a día.</p>
+      <p><a class="btn btn-default" href="../MesaMota/MesaMota.html">Más</a></p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img class="img-circle" src="img/3.jpg">
+      <h2 style="font-family: Gill Sans, sans-serif">Libreria Lemus en Trinidad</h2>
+      <p>Espacio para la cultura y el saber. Encuentra todo tipo de libros y documentación para ti.<br>Recuerda que el saber no ocupa lugar.</p>
+      <p><a class="btn btn-default" href="#">Más</a></p>
+    </div>
+  </div><!-- /.row -->
+
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+    <div>
+        <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Novedades:</u></a></p>
+    </div>
+    
+  <div class="featurette">
+    <a href="#"><img class="featurette-image img-circle pull-right" src="img/4.jpg"></a>
+    <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">Hotel_aguere<span class="text-muted"><br>Patrimonio artístico</span></h2>
+    <p class="lead">Completamente remodelado y situado en la antigua casa de los maqueses de Torrehermosa, edificio declarado Patrimonio Histórico-Artístico que está ubicado en pleno casco antiguo.</p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="featurette">
+    <a href="../Epoca/Epoca.html"><img class="featurette-image img-circle pull-left" src="img/5.jpg"></a>
+    <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">Café Bar Época. <span class="text-muted"><br>Vuelta al pasado.</span></h2>
+    <p class="lead">Café literario con tenue música de jazz, con chocolates bebidos, comidos o con alcohol.<br>Gran local para relajarse en "otros tiempos".</p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="featurette">
+    <a href="#"><img class="featurette-image img-circle pull-right" src="img/6.jpg"></a>
+    <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">100 Montaditos.<span class="text-muted"><br>Ambiente y calidad.</span></h2>
+    <p class="lead">La historia comenzó en el año 2000 en una pequeña playa de Islantilla, Huelva, con un concepto revolucionario, sencillo, de operativa fácil, con ingredientes de alta calidad y con una gran variedad, además de una divertida manera de hacer los pedidos, una combinación que ha resultado ser un completo éxito.</p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- /END THE FEATURETTES -->
