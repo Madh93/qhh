@@ -206,10 +206,40 @@ body {
     display: inline-block;
 }
 
-.mybutton,
+.tools{
+    width: 250px;
+    height: 80px;
+    text-align: center;
+    display: inline;
+}
+
+.rails {
+    width: 62px;
+    height: 80px;
+    background: image-url("rails.png") no-repeat;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.digital {
+    width: 126px;
+    height: 80px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background: image-url("digitalocean2.png") no-repeat;
+    background-color: #fff;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+.mybutton:focus,
 .scrollup:focus,
 .facebook:focus,
-.twitter:focus{
+.twitter:focus
+.rails:focus,
+.digital:focus{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
