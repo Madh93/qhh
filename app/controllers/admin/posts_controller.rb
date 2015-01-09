@@ -28,9 +28,9 @@ class Admin::PostsController < Admin::BaseController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      redirect_to admin_posts_dashboard_path, notice: "New post published."
+      redirect_to admin_posts_dashboard_path, notice: "Nuevo mensaje publicado."
     else
-      flash[:alert] = "Post not published."
+      flash[:alert] = "Mensaje no publicado."
       render :new
     end
   end
@@ -41,16 +41,16 @@ class Admin::PostsController < Admin::BaseController
   def update
     @post.slug = nil
     if @post.update(post_params)
-      redirect_to admin_posts_dashboard_path, notice: "Post successfully edited."
+      redirect_to admin_posts_dashboard_path, notice: "Mensaje correctamente editado."
     else
-      flash[:alert] = "The post was not edited."
+      flash[:alert] = "El mensaje no ha sido editado."
       render :edit
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to admin_posts_path, notice: "The post has been deleted."
+    redirect_to admin_posts_path, notice: "El mensaje ha sido eliminado."
   end
   
   
