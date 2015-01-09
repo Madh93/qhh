@@ -13,7 +13,7 @@
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "¿No has recibido ningún correo de activación?", new_confirmation_path(resource_name), style:"color:white" %><br />
+  <%= link_to "¿No has recibido ningún correo de confirmación?", new_confirmation_path(resource_name), style:"color:white" %><br />
 <% end -%>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
