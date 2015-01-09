@@ -37,7 +37,14 @@
           <ul class="nav navbar-nav navbar-right" >
 
             <li class="btn btn-info" style="font-family: Gill Sans, sans-serif;"><%= link_to "Home", root_path, { class: "mybutton",style: "color:white"}%></li>
-            <li class="btn btn-info" style="font-family: Gill Sans, sans-serif;"><%= link_to "Log in", new_user_session_path, { class: "mybutton",style: "color:white"}%></li>
+
+            <% if !user_signed_in? %>
+             <li class="btn btn-info" style="font-family: Gill Sans, sans-serif;"><%= link_to "Log in", new_user_session_path, { class: "mybutton",style: "color:white"}%></li>
+            <% else %>
+              <li class="btn btn-info" style="font-family: Gill Sans, sans-serif;"><%= link_to "MyQHH", root_path, { class: "mybutton",style: "color:white"}%></li>    
+              <li class="btn btn-info" style="font-family: Gill Sans, sans-serif;"><%= link_to "Salir", destroy_user_session_path, { class: "mybutton", data:{method: :delete},style: "color:white"}%></li>
+            <% end %>
+
             <li class="dropdown btn btn-info" style="font-family: Gill Sans, sans-serif;"><%= link_to "Encontrar", root_path, {class:"dropdown-toggle mybutton",data: {toggle:"modal"},style:"color:white"}%>
               <ul class="dropdown-menu">
                 <li><a href="../BUSCAR/menubuscar%20con%20myqhh.html">Buscar</a></li>
