@@ -7,7 +7,7 @@
     role: "form") do |f| %>
   
       <div class="form-group">
-        <%= f.label :usuario %>
+        <%= f.label :username , "Nombre de Usuario" %>
         <div class="row">
           <div class="col-sm-6">
             <%= f.text_field :username, :autofocus => true, class: "form-control" %>  
@@ -16,7 +16,7 @@
       </div>
       
       <div class="form-group">
-        <%= f.label :contraseña %>
+        <%= f.label :password, "Contraseña" %>
         <div class="row">
           <div class="col-sm-6">
             <%= f.password_field :password, class: "form-control" %>
@@ -30,7 +30,7 @@
 			<div class="form-group">
 				<div class="row">
 					<div class="col-sm-6">
-        		<%= f.check_box :remember_me %> <%= f.label :recuerdame %>
+        		<%= f.check_box :remember_me %> <%= f.label :remember_me, "Recuérdame" %>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row" style="margin-top:80px">
   <div class="col-sm-6 ">
-    <h1>Edit your profile</h1>
+    <h1>Modifica tu perfil</h1>
 
     <%= form_for(resource, :as => resource_name, 
     :url => registration_path(resource_name), 
@@ -20,13 +20,13 @@
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div class="row">
         <div class="col-sm-6">     
-          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <p>Esperando confirmación actualmente: <%= resource.unconfirmed_email %></p>
         </div>
       </div>
       <% end %>
 
       <div class="form-group">
-            <%= f.label :password %> <i><small>(leave blank if you don't want to change it)</small></i>
+            <%= f.label :password , "Contraseña" %> <i><small>(deja en blanco si no deseas modificarla)</small></i>
         <div class="row">
           <div class="col-sm-6">
             <%= f.password_field :password, :autocomplete => "off", class: "form-control" %>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="form-group">
-            <%= f.label :password_confirmation %>
+            <%= f.label :password_confirmation , "Confirmar contraseña" %>
         <div class="row">
           <div class="col-sm-6">
             <%= f.password_field :password_confirmation, class: "form-control" %>
@@ -44,7 +44,7 @@
       </div>
 
       <div class="form-group">
-            <%= f.label :current_password %> <i><small>(we need your current password to confirm your changes)</small></i>
+            <%= f.label :current_password, "Contraseña actual" %> <i><small>(es necesario la contraseña actual para confirmar los cambios)</small></i>
         <div class="row">
           <div class="col-sm-6">
             <%= f.password_field :current_password, class: "form-control" %>
@@ -54,7 +54,7 @@
 
       <div class="row">
         <div class="col-sm-6">
-          <%= f.submit "Update", class: "btn btn-primary" %> - <%= link_to "Cancel", inside_path %>
+          <%= f.submit "Actualizar cambios", class: "btn btn-primary" %> - <%= link_to "Cancelar", inside_path %>
         </div>
       </div>    
  

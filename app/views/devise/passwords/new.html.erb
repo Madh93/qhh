@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row" style="margin-top:80px">
   <div class="col-sm-6 ">
-    <h1>Forgot your password?</h1>
+    <h1>¿Olvidaste tu contraseña?</h1>
 
     <%= form_for(resource, :as => resource_name, 
     :url => password_path(resource_name), 
@@ -21,7 +21,8 @@
 
       <div class="row">
         <div class="col-sm-6">
-          <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+          <%= f.submit "Envíar instrucciones de reestablecimiento", class: "btn btn-primary" %>
+          <br></br>
         </div>
       </div>
       <% end %>

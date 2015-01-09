@@ -9,7 +9,7 @@
       <%= devise_error_messages! %>
     
       <div class="form-group">
-        <%= f.label :nombre_de_usuario %>
+        <%= f.label :username , "Nombre de Usuario" %>
         <div class="row">
           <div class="col-sm-6">
             <%= f.text_field :username, :autofocus => true, class: "form-control" %>  
@@ -29,7 +29,7 @@
       <div class="form-group">
         <div class="row">
           <div class="col-sm-6">
-            <%= f.label :contraseña %>
+            <%= f.label :password, "Contraseña" %>
             <%= f.password_field :password, class: "form-control" %>
           </div>
         </div>
@@ -38,7 +38,7 @@
       <div class="form-group">
         <div class="row">
           <div class="col-sm-6">
-            <%= f.label :repetir_contraseña %>
+            <%= f.label :password_confirmation, "Confirmar contraseña" %>
             <%= f.password_field :password_confirmation, class: "form-control" %>
           </div>
         </div>
