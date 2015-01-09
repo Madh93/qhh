@@ -1,6 +1,6 @@
 class ContactMailer < ActionMailer::Base
   add_template_helper(EmailHelper)
-  default from: ENV["SENDER_EMAIL"]
+  default from: "qhhmailer@gmail.com"
 
   
   def contact_message(name, email, message)
@@ -8,6 +8,6 @@ class ContactMailer < ActionMailer::Base
     @email = email
     @message = message
 
-    mail to: ENV["SENDER_EMAIL"], subject: "New message received at #{ENV["DOMAIN"]}"
+    mail to: "qhhmailer@gmail.com", subject: "New message received at @gmail.com"
   end
 end
