@@ -21,9 +21,12 @@
 <!-- FOOTER QUEHAGOHOY -->
 <footer>
   <p class="pull-right"><a href="#" style="color: white;"><u><em><i><b><tt>Subir</tt></b></i></em></u></a></p>
-  <div class="container">
-    <div class="col-xs-12 text-center">  
-      <p>Copyright &copy; <%= Time.now.year %> - Que Hago Hoy</p>
+  <div class="container myfooter">
+    <div class="row footer-first-row">
+      <div class="col-xs-12 text-center">  
+        <p>Copyright &copy; <%= Time.now.year %> - Que Hago Hoy</p>
+        <p style="color:white"><%= link_to "Contacto", contact_path, {:style=>'color:#FFFFFF;'}%></p> 
+      </div>
     </div>
   </div>
 </footer>
