@@ -178,7 +178,39 @@ body {
     background-color: #fff;
 }
 
-.scrollup:focus{
+.socialmedia{
+    width: 66px;
+    height: 30px;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    display: inline;
+}
+
+.facebook {
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    border-radius: 5px;
+    background: image-url("facebook.png") no-repeat;
+    display: inline-block;
+}
+
+.twitter {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 2px;
+    background: image-url("twitter.png") no-repeat;
+    background-color: #fff;
+    display: inline-block;
+}
+
+
+
+.scrollup:focus,
+.facebook:focus,
+.twitter:focus{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
