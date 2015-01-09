@@ -37,9 +37,9 @@ class Admin::UsersController < Admin::BaseController
     if @user.valid?
       @user.skip_reconfirmation!
       @user.save
-      redirect_to admin_users_path, notice: "#{@user.username} updated."
+      redirect_to admin_users_path, notice: "#{@user.username} confirmado."
     else
-      flash[:alert] = "#{old_username} couldn't be updated."
+      flash[:alert] = "#{old_username} no ha podido ser confirmado."
       render :edit
     end
   end
@@ -50,7 +50,7 @@ class Admin::UsersController < Admin::BaseController
   def set_user
     @user = User.friendly.find(params[:id])
   rescue
-    flash[:alert] = "The user with an id of #{params[:id]} doesn't exist."
+    flash[:alert] = "El usuario con id: #{params[:id]} no existe."
     redirect_to admin_users_path
   end
   

@@ -26,7 +26,7 @@ has_many :posts
   # Validations
   # :username
   validates :username, uniqueness: { case_sensitive: false }
-  validates_format_of :username, with: /\A[a-zA-Z0-9]*\z/, on: :create, message: "can only contain letters and digits"
+  validates_format_of :username, with: /\A[a-zA-Z0-9]*\z/, on: :create, message: "sólo puede contener letras y dígitos"
   validates :username, length: { in: 4..15 }
   # :email
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i

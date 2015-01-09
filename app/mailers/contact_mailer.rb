@@ -8,6 +8,6 @@ class ContactMailer < ActionMailer::Base
     @email = email
     @message = message
 
-    mail to: "qhhmailer@gmail.com", subject: "New message received at @gmail.com"
+    mail to: "qhhmailer@gmail.com", subject: "Nuevo Mensaje recibido Contacto@QueHagoHoy"
   end
 end
