@@ -46,5 +46,11 @@ def posts
   def encuentra
     @categoria = Category.all
   end
+
+  def show_category
+    @category = Category.find(params[:id])
+  rescue
+    redirect_to root_path
+  end
   
 end
