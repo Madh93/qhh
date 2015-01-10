@@ -27,6 +27,7 @@ module Qhh
     config.generators.test_framework false
     
     # autoload lib path
+    config.assets.precompile += %w(pages.css)
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
     
