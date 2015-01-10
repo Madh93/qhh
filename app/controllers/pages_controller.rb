@@ -42,5 +42,9 @@ def posts
       redirect_to root_path, notice: "Tu mensaje ha sido enviado. Gracias."
     end
   end
+
+  def encuentra
+    @categoria = Category.all
+  end
   
 end
