@@ -1,7 +1,8 @@
 /* BOOTSTRAP 3.x GLOBAL STYLES
 -------------------------------------------------- */
 body {
-  padding-bottom: 40px;
+  //padding-top: 60px;
+  //padding-bottom: 40px;
   color: white;
   background: image-url("home/fondo.jpg") no-repeat fixed;
 }
@@ -18,19 +19,18 @@ body {
   left: 0;
   right: 0;
   z-index: 2;
-  overflow: hidden;
+
 }
 
 .logo {
-    height: 56px; 
-    width: 117px;
-    margin-top: 10px;
-    margin-left: px;
+    height: 60px; 
+    width: 120px;
+    margin-top: 0px;
 }
 
 .navbar-default {
     background: rgba(255, 255, 255, 0.0);
-	overflow: hidden;
+
 }
 
 
