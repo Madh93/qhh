@@ -349,7 +349,7 @@ html,body {
 
 #wrap {
   min-height: 100%;
-  padding-bottom: 120px;
+  //padding-bottom: 120px;
 }
 
 blockquote{
@@ -552,11 +552,25 @@ img {
 //***********************************************************
 // FOOTER
 #footer {
-  background-color: #ffffff;
-  color: #373737;
-  height: 100px;
-  margin-top: -100px;  
-  letter-spacing: 1px;
+  //background-color: #ffffff;
+  //color: #373737;
+  //height: 100px;
+  //margin-top: -100px;  
+  //letter-spacing: 1px;
+  
+  z-index: 0;
+  //position: absolute;
+  //bottom: 0;
+  //left: 0;
+  //width: 100%;
+  min-height: 80px;
+  //height: auto;
+  color: white;
+  //text-decoration: none;
+  background-color: #222;
+  margin-top: -80px;
+
+
   
   .footer-first-row {
     padding-top: 20px;
