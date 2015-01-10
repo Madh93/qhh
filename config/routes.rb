@@ -16,5 +16,7 @@ Qhh::Application.routes.draw do
     get "posts/dashboard", to: "posts#dashboard", as: "posts_dashboard"
     resources :posts
   end
+
+  get "/myqhh", to: "pages#myqhh", as: "myqhh"
   
 end
