@@ -18,5 +18,6 @@ Qhh::Application.routes.draw do
   end
 
   get "/myqhh", to: "pages#myqhh", as: "myqhh"
+  get "/encuentra", to: "pages#encuentra", as: "encuentra"
   
 end
