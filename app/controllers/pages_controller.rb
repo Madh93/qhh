@@ -49,6 +49,15 @@ def posts
 
   def show_category
     @category = Category.find(params[:id])
+    # @description = {
+    #   "Respiremos aire puro": "Aprovecha los amplios espacios al aire libre de La Laguna" ,
+    #   "Tomemos algo...": "Cafeterías y bares donde descansar un rato",
+    #   "Las mejores películas": "Disfruta de una amplia cartelera en CC Alcampo",
+    #   "¡Barriguita llena corazón contento!": "¿Hambre? La laguna te ofrece la solución",
+    #   "Compremos un poco": "Multitud de tiendas para recorrer",
+    #   "Mantente en forma": "Diferentes lugares para realizar deporte",  
+    #   "Pasa un buen rato": "Sitios de ocio donde te divertirás de lo lindo",
+    #   "¡Vámonos de fiesta!": "Locales de ocio nocturno para pasar una buena noche"}  
   rescue
     redirect_to root_path
   end
