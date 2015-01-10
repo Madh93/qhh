@@ -445,7 +445,10 @@ $space-xs: 10px;
 //***********************************************************
 // FLASH MESSAGES
 .alert {
-  margin-top: 100px;
+  z-index: 999;
+  text-align: center;
+  position: fixed;
+  top: 20px;
 }
 //***********************************************************
 
