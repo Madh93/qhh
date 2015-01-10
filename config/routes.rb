@@ -19,6 +19,7 @@ Qhh::Application.routes.draw do
 
   get "/myqhh", to: "pages#myqhh", as: "myqhh"
   get "/encuentra", to: "pages#encuentra", as: "encuentra"
-  get "/categorias/:id", to: "pages#show_category", as: "categorias"
+  get "/categorias/:id", to: "pages#show_category", as: "categoria"
+
   
 end
