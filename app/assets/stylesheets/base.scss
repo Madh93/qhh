@@ -1,10 +1,50 @@
 /* BOOTSTRAP 3.x GLOBAL STYLES
 -------------------------------------------------- */
+html{
+  width: 100%;
+  height: 100%;
+}
+
 body {
   //padding-top: 60px;
   //padding-bottom: 40px;
-  color: white;
-  background: image-url("home/fondo.jpg") no-repeat fixed;
+  width: 100%;
+  height: 100%;
+  color: black;
+  //background: image-url("home/fondohd.jpg") no-repeat fixed;
+}
+
+.wrapper {
+   // min-height: 100%;
+    //position:relative;
+    //height: auto !important;
+    //height: 100%;
+    //margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.subfooter{
+  //background:url("scroll2.png") repeat-y scroll center top;
+  //float: left;
+  //min-height: 50px;
+  //width: 50px;
+  //height: auto;
+  //max-height: 1080px;
+  //overflow-y: auto;
+  //background-color: blue;
+}
+
+.expand-center{
+
+ // overflow-y: auto;
+   //   min-height: 800px;
+    //height: auto !important;
+    //height: 600px;
+}
+
+#content {
+    //min-height: 600px;
+    //height: auto !important;
+    //height: 600px;
 }
 
 
@@ -164,10 +204,22 @@ body {
 
 .myfooter{
 
-  margin-top: -150px;
+  //margin-top: -80px;
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+  color: white;
+  text-decoration: none;
+  background-color: #222;
+  clear: both;
 }
 
 .scrollup {
+    z-index: 5;
     width: 50px;
     height: 50px;
     position: fixed;
@@ -187,9 +239,11 @@ body {
     bottom: 50px;
     left: 50px;
     display: inline;
+    z-index: 5;
 }
 
 .facebook {
+    z-index: 5;
     width: 30px;
     height: 30px;
     text-indent: -9999px;
@@ -199,6 +253,7 @@ body {
 }
 
 .twitter {
+    z-index: 5;
     width: 30px;
     height: 30px;
     border-radius: 5px;
