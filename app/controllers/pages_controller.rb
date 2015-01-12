@@ -63,10 +63,10 @@ def posts
     redirect_to root_path
   end
 
-  #def show_site
+  def show_site
 
-  #rescue
-    #redirect_to root_path
- # end
+  rescue
+    redirect_to root_path
+  end
   
 end
