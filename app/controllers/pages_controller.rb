@@ -49,6 +49,7 @@ def posts
 
   def show_category
     @category = Category.find(params[:id])
+    @site = Site.where(category: @category.id)
     @description = [
       ["Respiremos aire puro", "Aprovecha los amplios espacios al aire libre de La Laguna"],
       ["Tomemos algo...", "Cafeterías y bares donde descansar un rato"],
@@ -61,5 +62,11 @@ def posts
   rescue
     redirect_to root_path
   end
+
+  #def show_site
+
+  #rescue
+    #redirect_to root_path
+ # end
   
 end
