@@ -38,4 +38,8 @@ Qhh::Application.configure do
     user_name: "qhhmailer@gmail.com",
     password: "10qpalzm<-"
   }
+
+  # QUITAR MENSAJES DE ERROR
+  config.consider_all_requests_local = false
+
 end
