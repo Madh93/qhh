@@ -30,6 +30,9 @@ module Qhh
     config.assets.precompile += %w(pages.css)
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
+    # Redirigir mensajes de error
+    config.exceptions_app = self.routes
     
   end
 end
