@@ -1,4 +1,10 @@
 Qhh::Application.routes.draw do
+  get 'errors/file_not_found'
+
+  get 'errors/unprocessable'
+
+  get 'errors/internal_server_error'
+
   root "pages#home"    
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
