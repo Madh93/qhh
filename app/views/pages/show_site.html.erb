@@ -1,5 +1,15 @@
 <% title(@sitio.name) %>
 
+<!-- Breadcrumbs -->
+<div id="bc1" class="btn-group btn-breadcrumb" style="margin-top:10px;">
+    <%= link_to root_path, class: "btn btn-default" do %>
+      <i class="fa fa-home"></i>
+    <% end %>
+    <%= link_to "Encuentra", encuentra_path, class: "btn btn-default" %>
+    <%= link_to Category.where(id: @sitio.category).pluck(:name).join, categoria_path(@sitio.category), class: "btn btn-default" %>
+    <%= link_to @sitio.longname, sitio_path(@sitio.id), class: "btn btn-default" %>
+</div>
+
 <!-- Page Content -->
 <div class="container">
   <hr>
