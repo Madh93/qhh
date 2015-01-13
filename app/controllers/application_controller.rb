@@ -52,5 +52,5 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :require_admin!
-  
+
 end
