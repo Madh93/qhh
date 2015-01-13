@@ -49,7 +49,9 @@ $(window).resize(function() {
 // Google Maps
 function show_map(sitio) {
   if ((sitio.latitude == null) || (sitio.longitude == null) ) {    // validation check if coordinates are there
+    alert("error");
     return 0;
+
   }
 
   handler = Gmaps.build('Google');    // map init
@@ -64,6 +66,28 @@ function show_map(sitio) {
           "height": 32
         },
         "infowindow": "<b>" + sitio.name + "</b> " + sitio.address + ", " + sitio.postal + "San Cristóbal de La Laguna"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(12);    // set the default zoom of the map
+  });
+}
+
+function show_map2() {
+
+  handler = Gmaps.build('Google');    // map init
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([    // put marker method
+      {
+        "lat": 28.5007814,    // coordinates from parameter sitio
+        "lng": -16.3156576,
+        "picture": {    // setup marker icon
+          "url": 'http://www.planet-action.org/img/2009/interieur/icons/orange-dot.png',
+          "width":  32,
+          "height": 32
+        },
+        "infowindow": "San Cristóbal de La Laguna"
       }
     ]);
     handler.bounds.extendWith(markers);
