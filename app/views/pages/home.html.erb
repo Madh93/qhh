@@ -1,10 +1,14 @@
 <% title("QHH") %>
-    <style>
-      body {
-        color: white;
-      }
-    </style>
-<!-- <h1><i class="fa fa-home"></i> Home Page EDITADO <small>views/pages/home.html.erb</small></h1> -->
+<style>
+  body {
+    color: white;
+  }
+</style>
+<script type="text/javascript">
+  $(document).ready(function(){
+    //getLocation();
+  });
+</script>
 
 <!-- Carousel
 ================================================== -->
@@ -71,7 +75,7 @@
         
   <hr class="featurette-divider">
         
-<div>
+<div style="margin-top:-50px;">
     <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Sugerencias:</u></a></p>
 </div>
         
@@ -80,7 +84,8 @@
   <!-- Three columns of text below the carousel -->
   <div class="row">
     <% @sugerencias.each do |sug| %>
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center" style="position:relative;margin-top:30px;">
+        <div id="distancia">A 10,8 kms</div>
         <center><%= image_tag("sitios/#{sug}/sugerencia.jpg", :class => "img-circle") %></center>
         <h2 style="font-family:Gill Sans,sans-serif"><%= Site.where(id:sug).pluck(:longname).join %></h2>
         <p><%= Site.where(id:sug).pluck(:text1).join[0..160] << "..." %></p>
