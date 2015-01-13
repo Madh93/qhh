@@ -6,25 +6,22 @@
 
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    width:100%;
 }
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
 .business-header {
     height: 400px;
-    //background: url(../img/Aljibe/0.jpg) center center no-repeat scroll;
+    //width: ;
+    color: red;
+    background: url("sitios/1/header.jpg") center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.logo {
-    height: 56px; 
-    width: 117px;
-    margin-top: 10px;
-    margin-left: px;
-}
 
 /* Customize the text color and shadow color and to optimize text legibility. */
 
