@@ -3,7 +3,11 @@
   <hr>
   <div class="row">
     <div class="col-sm-8">
-      <h2 style="font-family: Gill Sans, sans-serif;color: #333;">¿Quiénes somos?</h2>
+      <% if @sitio.category == 3 %>
+        <h2 style="font-family: Gill Sans, sans-serif;color: #333;">Argumento</h2>
+      <% else %>
+        <h2 style="font-family: Gill Sans, sans-serif;color: #333;">¿Quiénes somos?</h2>
+      <% end %>
       <p style="font-family: Gill Sans, sans-serif;color: #333;"><%= @sitio.text1 %></p>
     </div>
     <div class="col-sm-4">
