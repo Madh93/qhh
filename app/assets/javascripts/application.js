@@ -21,28 +21,28 @@
 
 // SCROLL UP
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-        $('.scrollup').fadeIn();
-    } else {
-        $('.scrollup').fadeOut();
-    }
+  if ($(this).scrollTop() > 100) {
+    $('.scrollup').fadeIn();
+  } else {
+    $('.scrollup').fadeOut();
+  }
 });
 
 $('.scrollup').click(function () {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 600);
-    return false;
+  $("html, body").animate({
+    scrollTop: 0
+  }, 600);
+  return false;
 });
 
 //BREADCRUMBS
 $(window).resize(function() {
 
-    ellipses1 = $("#bc1 :nth-child(2)")
-    if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
-    
-    ellipses2 = $("#bc2 :nth-child(2)")
-    if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
+  ellipses1 = $("#bc1 :nth-child(2)")
+  if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
+  
+  ellipses2 = $("#bc2 :nth-child(2)")
+  if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
     
 })
 
@@ -68,3 +68,31 @@ function show_map(sitio) {
     handler.getMap().setZoom(16);    // set the default zoom of the map
   });
 }
+
+
+// Geolocalizacion
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Error";
+  }
+}
+
+function showPosition(pos) {
+  //x.innerHTML = "Latitude: " + position.coords.latitude + 
+  //"<br>Longitude: " + position.coords.longitude;  
+  //var distancia = getDistance(pos.coords.latitude,pos.coords.longitude,28.463803,-16.305529);
+  //alert("lat: " + pos.coords.latitude + " long: " + pos.coords.longitude)
+  var distancia = calcDistance(28.4589002,-16.2507433,28.463803,-16.305529)/1000;
+  alert(distancia.toFixed(1));
+}
+
+
+// Calcular distancias
+
+function calcDistance (fromLat, fromLng, toLat, toLng) {
+  return google.maps.geometry.spherical.computeDistanceBetween(
+    new google.maps.LatLng(fromLat, fromLng), new google.maps.LatLng(toLat, toLng));
+} 
