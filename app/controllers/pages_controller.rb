@@ -4,12 +4,13 @@ class PagesController < ApplicationController
   ]
 
   def home
+    @sugerencias = sugerir((1..Site.count).to_a)
   end
   
   def inside
   end
   
-def posts
+  def posts
     @posts = Post.published.page(params[:page]).per(10)
   end
   
@@ -67,6 +68,18 @@ def posts
     @sitio = Site.find(params[:id])
   rescue
     redirect_to root_path
+  end
+
+  private
+
+  def sugerir (array)
+    devolver = []
+    3.times do
+        aux = array[rand(array.length)]
+        devolver << array[rand(array.length)]
+        array.delete(aux)
+    end
+    devolver
   end
   
 end
