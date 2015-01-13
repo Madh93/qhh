@@ -83,8 +83,8 @@
       <div class="col-md-4 text-center">
         <center><%= image_tag("sitios/#{sug}/sugerencia.jpg", :class => "img-circle") %></center>
         <h2 style="font-family:Gill Sans,sans-serif"><%= Site.where(id:sug).pluck(:longname).join %></h2>
-        <p><%= Site.where(id:sug).pluck(:text1).join %></p>
-        <p><a class="btn btn-default" href="../CienciaCosmos/CienciaCosmos.html">Más</a></p>
+        <p><%= Site.where(id:sug).pluck(:text1).join[0..160] << "..." %></p>
+        <p><%= link_to "Más", sitio_path(sug), class: "btn btn-info" %></p>
       </div>
     <% end %>
   </div>
