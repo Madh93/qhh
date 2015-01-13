@@ -8,6 +8,15 @@
   <p style="font-family: Gill Sans, sans-serif"><%= @description[@category.id-1][1] %></p>
 </header>
 
+<!-- Breadcrumbs -->
+<div id="bc1" class="btn-group btn-breadcrumb">
+    <%= link_to root_path, class: "btn btn-default" do %>
+      <i class="fa fa-home"></i>
+    <% end %>
+    <%= link_to "Encuentra", encuentra_path, class: "btn btn-default" %>
+    <%= link_to @category.name, categoria_path(@category.id), class: "btn btn-default" %>
+</div>
+
 <hr>
 
 <!-- Page Features -->
