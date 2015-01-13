@@ -64,7 +64,7 @@ def posts
   end
 
   def show_site
-
+    @sitio = Site.find(params[:id])
   rescue
     redirect_to root_path
   end
