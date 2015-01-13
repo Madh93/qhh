@@ -1,39 +1,26 @@
-<!-- Image Background Page Header -->
-<!-- Note: The background image is set within the business-casual.css file. -->
-<!-- <header class="business-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-          <h1 style="font-family: Gill Sans, sans-serif;" class="tagline"><%= @sitio.longname %></h1>
-      </div>
-    </div>
-  </div>
-</header> -->
-
-
 <!-- Page Content -->
 <div class="container">
   <hr>
   <div class="row">
     <div class="col-sm-8">
-      <h2 style="font-family: Gill Sans, sans-serif">¿Quiénes somos?</h2>
-      <p style="font-family: Gill Sans, sans-serif"><%= @sitio.text1 %></p>
+      <h2 style="font-family: Gill Sans, sans-serif;color: #333;">¿Quiénes somos?</h2>
+      <p style="font-family: Gill Sans, sans-serif;color: #333;"><%= @sitio.text1 %></p>
     </div>
     <div class="col-sm-4">
-      <h2 style="font-family: Gill Sans, sans-serif">Contáctenos</h2>
-      <address style="font-family: Gill Sans, sans-serif">
+      <h2 style="font-family: Gill Sans, sans-serif;color: #333;">Contáctenos</h2>
+      <address style="font-family: Gill Sans, sans-serif;color: #333;">
         <strong><%= @sitio.longname %></strong>
         <br><%= @sitio.address %>
         <br><%= @sitio.postal %> San Cristóbal de La Laguna
         <br>
       </address>
-      <address>
+      <address style="color: #333;">
         <% if !@sitio.phone.empty? %>
-        <abbr title="Teléfono" style="font-family: Gill Sans, sans-serif">Tfn: </abbr><%= @sitio.phone %>
+        <abbr title="Teléfono" style="font-family: Gill Sans, sans-serif;color: #333;">Tfn: </abbr><%= @sitio.phone %>
         <br>
         <% end %>
         <% if !@sitio.webpage.empty? %>
-          <p style="font-family: Gill Sans, sans-serif">Web: <a target="_blank" href="<%= @sitio.webpage %>" style="font-family: Gill Sans,sans-serif"><%= @sitio.webpage %></a></p>
+          <p style="font-family: Gill Sans, sans-serif;">Web: <a target="_blank" href="<%= @sitio.webpage %>" style="font-family: Gill Sans,sans-serif"><%= @sitio.webpage %></a></p>
         <% end %>
         <% if !@sitio.mail.empty? %>
           <abbr title="Email">E: </abbr><a href="mailto: <%= @sitio.mail %>"><%= @sitio.mail %></a>
@@ -45,17 +32,17 @@
   <div class="row">
     <div class="col-sm-4">
       <%= image_tag("sitios/#{@sitio.id}/1.jpg", class: "img-circle img-responsive img-center") %>
-      <!-- <h2 style="font-family: Gill Sans, sans-serif">Comidas</h2> -->
-      <p style="font-family: Gill Sans, sans-serif; color: #848484"><%= @sitio.text2 %></p>
+      <h2 style="font-family: Gill Sans, sans-serif;color: #333;">Acerca</h2>
+      <p style="font-family: Gill Sans, sans-serif; color: #848484;"><%= @sitio.text2 %></p>
     </div>
     <div class="col-sm-4">
       <%= image_tag("sitios/#{@sitio.id}/2.jpg", class: "img-circle img-responsive img-center") %>
-      <!-- <h2 style="font-family: Gill Sans, sans-serif">Gran variedad de vinos</h2> -->
-      <p style="font-family: Gill Sans, sans-serif; color: #848484"><%= @sitio.text3 %></p>
+      <h2 style="font-family: Gill Sans, sans-serif;color: #333;">Más Información</h2>
+      <p style="font-family: Gill Sans, sans-serif; color: #848484;"><%= @sitio.text3 %></p>
     </div>
     <div class="col-sm-4">
       <%= image_tag("sitios/#{@sitio.id}/1.jpg", class: "img-circle img-responsive img-center") %>
-      <h2 align="center" style="font-family: Gill Sans, sans-serif">Ubicación</h2>
+      <h2 align="center" style="font-family: Gill Sans, sans-serif;color: #333;">Ubicación</h2>
       <p style="font-family: Gill Sans, sans-serif; color: #848484">Obtenga la ubicación de <%= @sitio.name %> en Google Maps.</p>
     </div>
   </div>
