@@ -8,13 +8,22 @@
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 
   <%= stylesheet_link_tag 'base'%>
-  <%= stylesheet_link_tag 'business'%>
+  <%= stylesheet_link_tag 'site'%>
 
 
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
+
+
+<% if controller.controller_name == 'pages' && controller.action_name == 'show_site' %>
+  <%= render 'layouts/site' %>
+<% end %>
+
+
  <div id="wrap">
     <header>
       <%= render 'layouts/navigation' %>
