@@ -16,6 +16,9 @@
 //= require bootstrap 
 //= require common
 
+//= require underscore
+//= require gmaps/google
+
 // SCROLL UP
 $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -42,3 +45,29 @@ $(window).resize(function() {
     if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
     
 })
+
+// Google Maps
+function show_map(sitio) {
+  if ((sitio.latitude == null) || (sitio.longitude == null) ) {    // validation check if coordinates are there
+    return 0;
+  }
+
+  handler = Gmaps.build('Google');    // map init
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([    // put marker method
+      {
+        "lat": sitio.latitude,    // coordinates from parameter sitio
+        "lng": sitio.longitude,
+        "picture": {    // setup marker icon
+          "url": 'http://www.planet-action.org/img/2009/interieur/icons/orange-dot.png',
+          "width":  32,
+          "height": 32
+        },
+        "infowindow": "<b>" + sitio.name + "</b> " + sitio.address + ", " + sitio.postal + "San Cristóbal de La Laguna"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(12);    // set the default zoom of the map
+  });
+}
