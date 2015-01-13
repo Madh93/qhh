@@ -79,25 +79,15 @@
 
   <!-- Three columns of text below the carousel -->
   <div class="row">
-    <div class="col-md-4 text-center">
-      <center><%= image_tag("home/1.jpg", :class => "img-circle") %></center>
-      <h2 style="font-family: Gill Sans, sans-serif">Museo de la ciencia y el cosmos</h2>
-      <p>No te irás de aquí sin aprender y sobre todo sin divertirte con los entretenidos "experimentos" que nos ofrecen nuestros amigos del museo.</p>
-      <p><a class="btn btn-default" href="../CienciaCosmos/CienciaCosmos.html">Más</a></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <center><%= image_tag("home/2.jpg", :class => "img-circle") %></center>
-      <h2 style="font-family: Gill Sans, sans-serif">Monte de Mesa Mota</h2>
-      <p>Agradable lugar donde celebrar una chuletada con nuestros amigos o familia. Amplio y al aire libre, nos dará mucha paz y evadirnos del día a día.</p>
-      <p><a class="btn btn-default" href="../MesaMota/MesaMota.html">Más</a></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <center><%= image_tag("home/3.jpg", :class => "img-circle") %></center>
-      <h2 style="font-family: Gill Sans, sans-serif">Libreria Lemus en Trinidad</h2>
-      <p>Espacio para la cultura y el saber. Encuentra todo tipo de libros y documentación para ti.<br>Recuerda que el saber no ocupa lugar.</p>
-      <p><a class="btn btn-default" href="#">Más</a></p>
-    </div>
-  </div><!-- /.row -->
+    <% @sugerencias.each do |sug| %>
+      <div class="col-md-4 text-center">
+        <center><%= image_tag("sitios/#{sug}/sugerencia.jpg", :class => "img-circle") %></center>
+        <h2 style="font-family:Gill Sans,sans-serif"><%= Site.where(id:sug).pluck(:longname).join %></h2>
+        <p><%= Site.where(id:sug).pluck(:text1).join %></p>
+        <p><a class="btn btn-default" href="../CienciaCosmos/CienciaCosmos.html">Más</a></p>
+      </div>
+    <% end %>
+  </div>
 
 
   <!-- START THE FEATURETTES -->
