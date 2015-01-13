@@ -66,6 +66,7 @@ class PagesController < ApplicationController
 
   def show_site
     @sitio = Site.find(params[:id])
+    @path_header = "sitios/#{@sitio.id}/header.jpg"
   rescue
     redirect_to root_path
   end

@@ -23,11 +23,11 @@
         <abbr title="Teléfono" style="font-family: Gill Sans, sans-serif;color: #333;">Tfn: </abbr><%= @sitio.phone %>
         <br>
         <% end %>
-        <% if !@sitio.webpage.empty? %>
-          <p style="font-family: Gill Sans, sans-serif;">Web: <a target="_blank" href="<%= @sitio.webpage %>" style="font-family: Gill Sans,sans-serif"><%= @sitio.webpage %></a></p>
-        <% end %>
         <% if !@sitio.mail.empty? %>
           <abbr title="Email">E: </abbr><a href="mailto: <%= @sitio.mail %>"><%= @sitio.mail %></a>
+        <% end %>        
+        <% if !@sitio.webpage.empty? %>
+          <p style="font-family: Gill Sans, sans-serif;">Web: <a target="_blank" href="<%= @sitio.webpage %>" style="font-family: Gill Sans,sans-serif"><%= @sitio.webpage %></a></p>
         <% end %>
       </address>
     </div>
