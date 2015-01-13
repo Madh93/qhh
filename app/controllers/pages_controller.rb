@@ -76,7 +76,7 @@ class PagesController < ApplicationController
     devolver = []
     3.times do
         aux = array[rand(array.length)]
-        devolver << array[rand(array.length)]
+        devolver << aux
         array.delete(aux)
     end
     devolver
