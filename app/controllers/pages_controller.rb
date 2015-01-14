@@ -68,6 +68,52 @@ class PagesController < ApplicationController
   def show_site
     @sitio = Site.find(params[:id])
     @path_header = "sitios/#{@sitio.id}/header.jpg"
+    @nombres = ["Adrián", "Alejandro", "Alicia", "Ana", "Andrea", "Andrés", "Antonio", "Beatriz", "Carlos", 
+              "Cristina", "Daniel", "David", "Diego", "Eduardo", "Elena", "Eva", "Gabriel", "Irene", "Jaime", 
+              "Javier", "Jorge", "Juan", "Julia", "Julián", "Laura", "Lucía", "Luis", "Marcos", "Mario", 
+              "Marta", "Miguel", "Mónica", "Nuria", "Pablo", "Patricia", "Paula", "Raquel", "Raúl", "Ricardo", 
+              "Rubén", "Sandra", "Sara", "Sergio", "Silvia", "Sonia", "Tomás", "Víctor", "Óscar"] 
+    @com_sitios = ["Fui ayer y lo pasé muy bien.",
+                  "Genial sitio, totalmente recomendable.",
+                  "Unos amigos míos me lo habían recomendado, y no fallaron.",
+                  "Muy bien, lo recomiendo.",
+                  "No estuvo mal, pero me esperaba más.",
+                  "Directo a mis favoritos!",
+                  "No me ha gustado nada.",
+                  "Conocí a mi novio aquí, hace ya tres años, gran lugar para recordar.",
+                  "He ido con mi familia, y a todos nos ha gustado mucho.",
+                  "Bueno, bonito y barato.",
+                  "Me ha decepcionado.",
+                  "No lo recomiendo, ha cambiado mucho desde la última vez que fui.",
+                  "Pues que decir, que prácticamente perfecto.",
+                  "Estoy deseando ir algún día.",
+                  "Este fin de semana iré, espero no arrepentirme.",
+                  "Fantástico sitio!",
+                  "Gracias a QueHagoHoy por descubrírmelo!",
+                  "Gran sitio, suelo ir cada dos por tres",
+                  "¿QueHagoHoy? pues seguramente visitar este lugar.",
+                  "Totalmente recomendable, ahora bien ¿QueHagoMañana? :D",
+                  "No lo conocía hasta que lo ví en QueHagoHoy, increíble."]
+    @com_peliculas = ["Estoy deseando ver esta película.","Me ha encantado esta película.", 
+                "Sin duda se trata de una de las mejores películas de su género.", 
+                "Gran película, pero está claro que estas cosas solo pasan en el cine y no en la realidad.",
+                "Sublime.",
+                "Me esperaba más de ella.",
+                "No está mal, pero quizás le falto algo de acción al final.",
+                "La ví ayer, y sin ninguna duda, cumplió con mis expectativas.",
+                "Menudo aburrimiento de película, no se la recomiendo a nadie.",
+                "Peliculón, me ha encantado la puesta en escena de los actores.",
+                "Lo mejor, la trama, no cabe duda de que la historia original da para mucho.",
+                "Espero verla este finde, me han dicho que es muy buena.",
+                "Se nota la mano del director, no hay una sola película que no me haya gustado de él.",
+                "Ví la película tras el espectacular tráiler que pusieron en la televisión, sin embargo más allá de eso, no me ha cautivado demasiado.",
+                "Me encantó el tráiler, espero poder verla pronto.",
+                "Acabo de salir del cine, y lo digo claro, mañana repito. Peliculón.",
+                "Bueno cada uno tiene su opinión, pero ya digo, me ha decepcionado.",
+                "Increíble el final, no me lo esperaba.",
+                "La película empieza algo floja, pero conforme avanza va mejorando. La recomiendo.",
+                "Simplemente, sobrevalorada, y no tengo nada más que añadir."]
+
   rescue
     redirect_to root_path
   end
