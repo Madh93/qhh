@@ -1,3 +1,16 @@
+.votos {
+    width: 178px;
+    height: 34px;
+}
+
+.voto {
+    font-size:18px;
+    color:green;
+    margin-left: 78px;
+    margin-top: 4px;
+    position: absolute;
+}
+
 
 #login { display: none; }
 .login,
@@ -26,7 +39,7 @@
 .media-date li { padding: 0; }
 .media-date li:first-child:before { content: ''; }
 .media-date li:before { 
-    content: '.'; 
+    content: '/'; 
     margin-left: -2px; 
     margin-right: 2px;
 }
