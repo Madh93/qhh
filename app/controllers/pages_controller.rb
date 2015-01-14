@@ -69,7 +69,7 @@ class PagesController < ApplicationController
     @sitio = Site.find(params[:id])
     @location = [@sitio]
     @path_header = "sitios/#{@sitio.id}/header.jpg"
-    @nombres = ["Adrián", "Alejandro", "Alicia", "Ana", "Andrea", "Andrés", "Antonio", "Beatriz", "Carlos", 
+    @nombres = ["Adrián", "Álex", "Alicia", "Ana", "Andrea", "Andrés", "Antonio", "Beatriz", "Carlos", 
               "Cristina", "Daniel", "David", "Diego", "Eduardo", "Elena", "Eva", "Gabriel", "Irene", "Jaime", 
               "Javier", "Jorge", "Juan", "Julia", "Julián", "Laura", "Lucía", "Luis", "Marcos", "Mario", 
               "Marta", "Miguel", "Mónica", "Nuria", "Pablo", "Patricia", "Paula", "Raquel", "Raúl", "Ricardo", 

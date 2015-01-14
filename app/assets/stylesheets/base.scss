@@ -17,7 +17,8 @@ body {
 
 .distancia {
 
-  display: none;
+  //display: none;
+  visibility: hidden;
   position: absolute;
   z-index: 10;
   left: 58%;
