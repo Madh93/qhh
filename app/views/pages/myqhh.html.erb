@@ -1,77 +1,65 @@
-<% title("Protected page") %>
+<% title("MyQHH") %>
 
 <!-- Jumbotron Header -->
 <header class="fondo jumbotron">
     <h1 style="font-family: Gill Sans, sans-serif">MyQHH</h1>
     <p style="font-family: Gill Sans, sans-serif">Ajustes y preferencias de lugares</p>
-    <!--p><a class="btn btn-primary btn-large">Call to action!</a>
-    </p-->
+    <p><%= link_to "Ajustes de cuenta", sitio_path(2), class: "btn btn-primary btn-large" %></p>
 </header>
 
 <hr>
 
 <div>
-    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: black;" href="#"><u>Lugares visitados</u></a></p>
+    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Lugares visitados</u></a></p>
 </div>
         
-<div class="container marketing" style="color: black;">
-
-  <!-- Three columns of text below the carousel -->
+<div class="container marketing" style="color: white;">
   <div class="row">
-    <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/la-bourmet.jpg">
-      <h2 style="font-family: Gill Sans, sans-serif">La Bourmet</h2>
-      <p><a class="btn btn-default" href="#">Más »</a></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/tasca-el-aljibe.jpg">
-      <h2 style="font-family: Gill Sans, sans-serif">El Aljibe</h2>
-      <p><a class="btn btn-default" href="../LUGAR/TascaAljibe.html">Más »</a></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/chupeteria-simpalabras.jpg">
-      <h2 style="font-family: Gill Sans, sans-serif">Simpalabras</h2>
-
-      <p><a class="btn btn-default" href="#">Más »</a></p>
-    </div>
-  </div><!-- /.row -->
-
-
+    <% @mysites[0..2].each do |s| %>
+      <div class="col-md-4 text-center" style="margin-top:30px;">
+        <center><%= image_tag("sitios/#{s.id}/sugerencia.jpg", :class => "img-circle") %></center>
+        <h2 style="font-family:Gill Sans,sans-serif"><%= s.longname %></h2>
+        <p><%= s.text1[0..160] << "..." %></p>
+        <p><%= link_to "Más", sitio_path(s.id), class: "btn btn-info" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>  
 
 <div>
-    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: black;" href="#"><u>Favoritos</u></a></p>
+    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Favoritos</u></a></p>
 </div>
-        
-<div class="container marketing" style="color: black;">
 
-  <!-- Three columns of text below the carousel -->
+<div class="container marketing" style="color: white;">
   <div class="row">
-    <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/chupeteria-simpalabras.jpg">
-      <h2 style="font-family: Gill Sans, sans-serif">Simpalabras</h2>
-      <p><a class="btn btn-default" href="#">Más »</a></p>
-    </div>
-  </div><!-- /.row -->
-
-
-  <div>
-    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: black;" href="#"><u>Pendientes</u></a></p>
-</div>
-        
-<div class="container marketing" style="color: black;">
-
-  <!-- Three columns of text below the carousel -->
-  <div class="row">
-    <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/beers.jpg">
-      <h2 style="font-family: Gill Sans, sans-serif">Beers</h2>
-      <p><a class="btn btn-default" href="#">Más »</a></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <img class="img-circle" src="img/playa-casa-pepe.jpg">
-      <h2 style="font-family: Gill Sans, sans-serif">Casa Pepe</h2>
-      <p><a class="btn btn-default" href="#">Más »</a></p>
-    </div>
-
+    <% @mysites[1..2].each do |s| %>
+      <div class="col-md-4 text-center" style="margin-top:30px;">
+        <center><%= image_tag("sitios/#{s.id}/sugerencia.jpg", :class => "img-circle") %></center>
+        <h2 style="font-family:Gill Sans,sans-serif"><%= s.longname %></h2>
+        <p><%= s.text1[0..160] << "..." %></p>
+        <p><%= link_to "Más", sitio_path(s.id), class: "btn btn-info" %></p>
+      </div>
+    <% end %>
   </div>
+</div>  
+        
+<div>
+    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Pendientes</u></a></p>
+</div>
 
+<div class="container marketing" style="color: white;">
+  <div class="row">
+    <% @mysites[3..5].each do |s| %>
+      <div class="col-md-4 text-center" style="margin-top:30px;">
+        <center><%= image_tag("sitios/#{s.id}/sugerencia.jpg", :class => "img-circle") %></center>
+        <h2 style="font-family:Gill Sans,sans-serif"><%= s.longname %></h2>
+        <p><%= s.text1[0..160] << "..." %></p>
+        <p><%= link_to "Más", sitio_path(s.id), class: "btn btn-info" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>  
+
+<br></br>
+<br></br>
+<br></br>
