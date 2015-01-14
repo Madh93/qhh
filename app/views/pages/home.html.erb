@@ -6,7 +6,8 @@
 </style>
 <script type="text/javascript">
   $(document).ready(function(){
-    getLocation();
+   var sitio = <%= raw @sugerencias.to_json %>;
+   getLocation(sitio);
   });
 </script>
 
@@ -82,14 +83,14 @@
 <div class="container marketing">
 
   <!-- Three columns of text below the carousel -->
-  <div class="row">
+  <div class="row" onload="hola();">
     <% @sugerencias.each do |sug| %>
       <div class="col-md-4 text-center" style="position:relative;margin-top:30px;">
-        <div id="distancia">A 10,8 kms</div>
-        <center><%= image_tag("sitios/#{sug}/sugerencia.jpg", :class => "img-circle") %></center>
-        <h2 style="font-family:Gill Sans,sans-serif"><%= Site.where(id:sug).pluck(:longname).join %></h2>
-        <p><%= Site.where(id:sug).pluck(:text1).join[0..160] << "..." %></p>
-        <p><%= link_to "Más", sitio_path(sug), class: "btn btn-info" %></p>
+        <div class="distancia"></div>
+        <center><%= image_tag("sitios/#{sug.id}/sugerencia.jpg", :class => "img-circle") %></center>
+        <h2 style="font-family:Gill Sans,sans-serif"><%= sug.longname %></h2>
+        <p><%= sug.text1[0..160] << "..." %></p>
+        <p><%= link_to "Más", sitio_path(sug.id), class: "btn btn-info" %></p>
       </div>
     <% end %>
   </div>

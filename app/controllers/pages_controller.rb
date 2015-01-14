@@ -4,7 +4,8 @@ class PagesController < ApplicationController
   ]
 
   def home
-    @sugerencias = sugerir((1..Site.count).to_a)
+    n = sugerir((1..Site.count).to_a)
+    @sugerencias =  Site.where(id: n)
   end
   
   def inside
