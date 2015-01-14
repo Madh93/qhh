@@ -92,7 +92,8 @@ function showPosition(pos) {
     $('.distancia').eq(i).text("A "+distance.toFixed(1)+" kms");
   }
 
-  $('.distancia').css('display','block');
+  //$('.distancia').css('display','block');
+  $('.distancia').css('visibility','visible');
 }
 
 
