@@ -71,22 +71,26 @@ function show_map(sitio) {
 
 
 // Geolocalizacion
+var sitio = "";
 
-function getLocation() {
+function getLocation(site) {
+
+  sitio = site
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Error";
-  }
+  } 
 }
 
 function showPosition(pos) {
-  //x.innerHTML = "Latitude: " + position.coords.latitude + 
-  //"<br>Longitude: " + position.coords.longitude;  
-  //var distancia = getDistance(pos.coords.latitude,pos.coords.longitude,28.463803,-16.305529);
-  //alert("lat: " + pos.coords.latitude + " long: " + pos.coords.longitude)
-  var distancia = calcDistance(28.4589002,-16.2507433,28.463803,-16.305529)/1000;
-  alert(distancia.toFixed(1));
+    
+  var distance;
+
+  for (i=0; i<=2; i++){
+    distance = calcDistance(pos.coords.latitude,pos.coords.longitude,
+                sitio[i].latitude,sitio[i].longitude)/1000;
+    $('.distancia').eq(i).text("A "+distance.toFixed(1)+" kms");
+  }
 }
 
 
