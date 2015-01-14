@@ -91,6 +91,8 @@ function showPosition(pos) {
                 sitio[i].latitude,sitio[i].longitude)/1000;
     $('.distancia').eq(i).text("A "+distance.toFixed(1)+" kms");
   }
+
+  $('.distancia').css('display','block');
 }
 
 
