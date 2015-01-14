@@ -8,8 +8,6 @@
   });
 </script>
 
-
-
 <!-- Breadcrumbs -->
 <div id="bc1" class="btn-group btn-breadcrumb" style="margin-top:10px;">
     <%= link_to root_path, class: "btn btn-default" do %>
@@ -18,6 +16,21 @@
     <%= link_to "Encuentra", encuentra_path, class: "btn btn-default" %>
     <%= link_to Category.where(id: @sitio.category).pluck(:name).join, categoria_path(@sitio.category), class: "btn btn-default" %>
     <%= link_to @sitio.longname, sitio_path(@sitio.id), class: "btn btn-default" %>
+</div>
+
+<!-- Redes sociales -->
+<div style="margin-top:20px;">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.quehagohoy.me/sitios/<%=@sitio.id%>" data-text="Me encanta" data-via="QHagoHoy" data-lang="es" data-size="large" data-hashtags="QueHagoHoy">Twittear</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  
 </div>
 
 <!-- Page Content -->
