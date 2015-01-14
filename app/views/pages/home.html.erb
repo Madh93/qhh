@@ -85,7 +85,7 @@
   <!-- Three columns of text below the carousel -->
   <div class="row" onload="hola();">
     <% @sugerencias.each do |sug| %>
-      <div class="col-md-4 text-center" style="position:relative;margin-top:30px;">
+      <div class="col-md-4 text-center" style="margin-top:30px;">
         <div class="distancia"></div>
         <center><%= image_tag("sitios/#{sug.id}/sugerencia.jpg", :class => "img-circle") %></center>
         <h2 style="font-family:Gill Sans,sans-serif"><%= sug.longname %></h2>
