@@ -21,8 +21,9 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="item active">
-     <%= image_tag("home/barock1.jpg", :style => "width:100%", :class => "img-responsive") %>
+
+    <div class="item active" style="background: url(<%= asset_path "home/barock2.jpg" %>) center center no-repeat scroll;">
+        <%= link_to(root_path) do %>
       <div class="container">
         <div class="carousel-caption">
           <!--h1>Bootstrap 3 Carousel Layout</h1-->
@@ -31,23 +32,25 @@
         </p-->
         </div>
       </div>
+      <% end %>
     </div>
-    <div class="item">
-      <%= image_tag("home/berto2.jpg", :style => "width:100%", :class => "img-responsive") %>
+    <div class="item" style="background: url(<%= asset_path "home/berto2.jpg" %>) center center no-repeat scroll;">
+      <%= link_to(categoria_path(7)) do %>
       <div class="container">
         <div class="carousel-caption">
           <p style="font-size: 40px; font-family: Gill Sans, sans-serif" align="left"><strong>HUMOR</strong><br><span class="text-muted">Cómicos en LL</span></p>
         </div>
       </div>
+      <% end %>
     </div>
-    <div class="item">
-      <a href="../Sinsajo/Sinsajo.html">
-      <%= image_tag("home/sinsajo2.jpg", :style => "width:100%", :class => "img-responsive") %>
+    <div class="item" style="background: url(<%= asset_path "home/sinsajo2.jpg" %>) center center no-repeat scroll;">
+      <%= link_to(sitio_path(10)) do %>
       <div class="container">
         <div class="carousel-caption">
           <p style="font-size: 40px; font-family: Gill Sans, sans-serif" align="right"><strong>CINE</strong><br><span class="text-muted">Carteleras a la última</span></p>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
   <!-- Controls -->
