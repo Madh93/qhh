@@ -72,6 +72,12 @@ class PagesController < ApplicationController
     redirect_to root_path
   end
 
+  def myqhh
+    @mysites = Site.where(id: [1,4,7,10,13,16])
+  #rescue
+   # redirect_to root_path
+  end
+
   private
 
   def sugerir (array)
