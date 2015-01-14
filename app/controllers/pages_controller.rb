@@ -74,8 +74,8 @@ class PagesController < ApplicationController
 
   def myqhh
     @mysites = Site.where(id: [1,4,7,10,13,16])
-  #rescue
-   # redirect_to root_path
+  rescue
+    redirect_to root_path
   end
 
   private
