@@ -90,7 +90,7 @@ class PagesController < ApplicationController
                   "Este fin de semana iré, espero no arrepentirme.",
                   "Fantástico sitio!",
                   "Gracias a QueHagoHoy por descubrírmelo!",
-                  "Gran sitio, suelo ir cada dos por tres",
+                  "Gran sitio, suelo ir cada dos por tres.",
                   "¿QueHagoHoy? pues seguramente visitar este lugar.",
                   "Totalmente recomendable, ahora bien ¿QueHagoMañana? :D",
                   "No lo conocía hasta que lo ví en QueHagoHoy, increíble."]
