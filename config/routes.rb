@@ -28,7 +28,6 @@ Qhh::Application.routes.draw do
   get "/encuentra", to: "pages#encuentra", as: "encuentra"
   get "/categorias/:id", to: "pages#show_category", as: "categoria"
   get "/sitios/:id", to: "pages#show_site", as: "sitio"
-  post "/buscar", to: "pages#search", as: "buscar"
 
   # Mensajes de error
   match '/404', to: 'errors#file_not_found', via: :all
