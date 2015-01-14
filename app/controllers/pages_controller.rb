@@ -67,6 +67,7 @@ class PagesController < ApplicationController
 
   def show_site
     @sitio = Site.find(params[:id])
+    @location = [@sitio]
     @path_header = "sitios/#{@sitio.id}/header.jpg"
     @nombres = ["Adrián", "Alejandro", "Alicia", "Ana", "Andrea", "Andrés", "Antonio", "Beatriz", "Carlos", 
               "Cristina", "Daniel", "David", "Diego", "Eduardo", "Elena", "Eva", "Gabriel", "Irene", "Jaime", 
