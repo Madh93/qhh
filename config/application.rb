@@ -27,7 +27,7 @@ module Qhh
     config.generators.test_framework false
     
     # autoload lib path
-    config.assets.precompile += %w(pages.css)
+    config.assets.precompile += %w(pages.css application.css base.css breadcrumbs.css comentarios.css site.css railbricks_custom.css application.js underscore.js)
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 

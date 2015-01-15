@@ -26,6 +26,10 @@ Qhh::Application.configure do
 #  config.assets.debug = true
 #MINIFIED
   config.assets.debug = false
+
+  # Compress JavaScripts and CSS.
+  config.assets.js_compressor = :uglifier
+  config.assets.css_compressor = :sass
   
   # Mailer
   config.action_mailer.raise_delivery_errors = true
