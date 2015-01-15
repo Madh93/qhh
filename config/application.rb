@@ -31,6 +31,9 @@ module Qhh
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
+    # Hailitar compresion
+    config.middleware.use Rack::Deflater
+
     # Redirigir mensajes de error
     config.exceptions_app = self.routes
     
