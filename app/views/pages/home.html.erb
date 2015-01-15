@@ -23,7 +23,7 @@
   <div class="carousel-inner">
 
     <div class="item active" style="background: url(<%= asset_path "home/barock.jpg" %>) center center no-repeat scroll;">
-        <%= link_to(root_path) do %>
+      <%= link_to(sitio_path(26)) do %>
       <div class="container">
         <div class="carousel-caption">
           <!--h1>Bootstrap 3 Carousel Layout</h1-->
@@ -80,7 +80,7 @@
   <hr class="featurette-divider">
         
 <div style="margin-top:-50px;">
-    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Sugerencias:</u></a></p>
+    <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;"><u>Sugerencias:</u></a></p>
 </div>
         
 <div class="container marketing">
@@ -103,11 +103,11 @@
 
   <hr class="featurette-divider">
     <div>
-        <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;" href="#"><u>Novedades:</u></a></p>
+        <p style="text-align: center; font-size: 40px; font-family: Gill Sans, sans-serif"><a style="color: white;"><u>Novedades:</u></a></p>
     </div>
     
   <div class="featurette">
-    <a href="#"><%= image_tag("home/4.jpg", :class => "featurette-image img-circle pull-right") %></a>
+    <%= link_to image_tag("home/4.jpg", :class => "featurette-image img-circle pull-right"), sitio_path(24) %></a>
     <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">Hotel_Aguere<span class="text-muted"><br>Patrimonio artístico</span></h2>
     <p class="lead">Completamente remodelado y situado en la antigua casa de los maqueses de Torrehermosa, edificio declarado Patrimonio Histórico-Artístico que está ubicado en pleno casco antiguo.</p>
   </div>
@@ -123,7 +123,7 @@
   <hr class="featurette-divider">
 
   <div class="featurette">
-    <a href="#"><%= image_tag("home/6.jpg", :class => "featurette-image img-circle pull-right") %></a>
+    <%= link_to image_tag("home/6.jpg", :class => "featurette-image img-circle pull-right"), sitio_path(17) %></a>
     <h2 class="featurette-heading" style="font-family: Gill Sans, sans-serif">100 Montaditos.<span class="text-muted"><br>Ambiente y calidad.</span></h2>
     <p class="lead">La historia comenzó en el año 2000 en una pequeña playa de Islantilla, Huelva, con un concepto revolucionario, sencillo, de operativa fácil, con ingredientes de alta calidad y con una gran variedad, además de una divertida manera de hacer los pedidos, una combinación que ha resultado ser un completo éxito.</p>
   </div>
