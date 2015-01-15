@@ -34,7 +34,11 @@ module Qhh
     # Hailitar compresion
     config.middleware.use Rack::Deflater
 
-    # Redirigir mensajes de error
+    # Compress JavaScripts and CSS.
+    config.assets.js_compressor = :uglifier
+    config.assets.css_compressor = :sass 
+
+   # Redirigir mensajes de error
     config.exceptions_app = self.routes
     
   end
