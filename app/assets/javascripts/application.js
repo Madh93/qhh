@@ -19,7 +19,7 @@
 //= require underscore
 //= require gmaps/google
 
-// SCROLL UP
+// Scroll up
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
     $('.scrollup').fadeIn();
@@ -35,7 +35,7 @@ $('.scrollup').click(function () {
   return false;
 });
 
-//BREADCRUMBS
+// Breadcrumbs
 $(window).resize(function() {
 
   ellipses1 = $("#bc1 :nth-child(2)")
@@ -48,27 +48,24 @@ $(window).resize(function() {
 
 // Google Maps
 function show_map(sitio) {
-  if ((sitio.latitude == null) || (sitio.longitude == null) ) {    // validation check if coordinates are there
-    alert("error");
+  if ((sitio.latitude == null) || (sitio.longitude == null) ) {
     return 0;
-
   }
 
-  handler = Gmaps.build('Google');    // map init
+  handler = Gmaps.build('Google'); 
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers([    // put marker method
+    markers = handler.addMarkers([
       {
-        "lat": sitio.latitude,    // coordinates from parameter sitio
+        "lat": sitio.latitude,
         "lng": sitio.longitude,
         "infowindow": "<b>" + sitio.name + "</b>, " + sitio.address + ", " + sitio.postal + " San Cristóbal de La Laguna"
       }
     ]);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-    handler.getMap().setZoom(16);    // set the default zoom of the map
+    handler.getMap().setZoom(16);
   });
 }
-
 
 // Geolocalizacion
 var sitio = "";
@@ -92,13 +89,11 @@ function showPosition(pos) {
     $('.distancia').eq(i).text("A "+distance.toFixed(1)+" kms");
   }
 
-  //$('.distancia').css('display','block');
   $('.distancia').css('visibility','visible');
 }
 
 
 // Calcular distancias
-
 function calcDistance (fromLat, fromLng, toLat, toLng) {
   return google.maps.geometry.spherical.computeDistanceBetween(
     new google.maps.LatLng(fromLat, fromLng), new google.maps.LatLng(toLat, toLng));
