@@ -6,43 +6,29 @@ html{
 }
 
 body {
-  //padding-top: 60px;
-  //padding-bottom: 40px;
   width: 100%;
   height: 100%;
   color: white;
-  //color: black;
   background: image-url("home/fondohd.jpg") no-repeat fixed;
 }
 
 .distancia {
-
-  //display: none;
   visibility: hidden;
   position: absolute;
   z-index: 10;
   left: 58%;
   margin-top: -10px;
   color:white;
-
   width: 100px;
   height: 32px;
-
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
   -moz-opacity: 0.9;
   -khtml-opacity: 0.9;
   opacity: 0.9;
   border: 7px #ec0404 inset;
-  //border: 7px #0296D1 inset;
-  //border: 7px #E6F200 inset;
-
   background-color: #e80208;
-  //background-color: #16B6F5;
-  //background-color: #E9F241;
-
   padding: 0px;
-
   font-size: 13px;
   font-weight: bolder;
   font-family: inherit;
@@ -52,56 +38,17 @@ body {
   -webkit-border-radius: 190px;
   -moz-border-radius: 190px;
   border-radius: 190px;
-
   -webkit-border-top-right-radius: 0px;
   -moz-border-radius-topright: 0px;
   border-top-right-radius: 0px;
-
   -moz-box-shadow: -4px 4px 6px 1px #757575;
   -webkit-box-shadow: -4px 4px 6px 1px #757575;
   box-shadow: -4px 4px 6px 1px #757575;
 }
 
-.category-header {
-
-  //background-color: gray;
-}
-
-.wrapper {
-   // min-height: 100%;
-    //position:relative;
-    //height: auto !important;
-    //height: 100%;
-    //margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
-}
-
-.subfooter{
-  //background:url("scroll2.png") repeat-y scroll center top;
-  //float: left;
-  //min-height: 50px;
-  //width: 50px;
-  //height: auto;
-  //max-height: 1080px;
-  //overflow-y: auto;
-  //background-color: blue;
-}
-
-.expand-center{
-  
+.expand-center {
   margin-bottom: 100px;
- // overflow-y: auto;
-   //   min-height: 800px;
-    //height: auto !important;
-    //height: 600px;
 }
-
-#content {
-    //min-height: 600px;
-    //height: auto !important;
-    //height: 600px;
-}
-
-
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -126,7 +73,6 @@ body {
     background: rgba(255, 255, 255, 0.0);
 
 }
-
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -224,7 +170,6 @@ body {
 }
 
 
-
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -255,10 +200,8 @@ body {
 
 }
 
-
-.myfooter{
-
-  //margin-top: -80px;
+/* Nuevos añadidos */
+.myfooter {
   z-index: 0;
   position: absolute;
   bottom: 0;
